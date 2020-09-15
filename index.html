@@ -20,6 +20,23 @@
     <main class='items' id='items'>
         
     </main>
+    <footer>
+    </footer>
+    <script>
+        const cart = []
+
+        function addItem(name, price) {
+            const item = {name:name, price:price, qty:1}
+            cart.push(name)
+        }
+
+        function showItems() {
+            console.log(`You have ${cart.length} items in your cart`)
+        }
+
+        addItem("Orange", "0.99")
+        showItems()
+    </script>
+    <script src='./resources/js/scripts.js' type="module"></script>
 </body>
-<script src='./resources/js/scripts.js' type="module"></script>
 </html>
