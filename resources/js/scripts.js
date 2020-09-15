@@ -1,6 +1,8 @@
 import data from './data.js'
 
 const itemsContainer = document.getElementById('items')
+const itemList = document.getElementById('item-list')
+
 // the length of our data determines how many times this loop goes around
 for (let i=0; i<data.length; ++i) {
     // create a new div element and give it a class name
