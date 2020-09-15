@@ -66,10 +66,26 @@
             return total.toFixed(2)
         }
 
+        function removeItem(name, qty = 0) {
+            for (let i = 0; i<cart.length; i+=1) {
+                if (cart[i].name === name) {
+                    if (qty > 0) {
+                        cart[i].qty -= 1
+                    }
+                    if (cart[i].qty < 1 || qty === 0){
+                        cart.splice(i,1)
+                    }
+                    return
+                }
+            }
+        }
+
+        addItem("Orange", 0.99)
         addItem("Orange", 0.99)
         addItem("Orange", 0.99)
         addItem("Apple", 1.00)
         addItem("Banana", 1.50)
+        //removeItem("Orange", 1)
 
 
         showItems()
